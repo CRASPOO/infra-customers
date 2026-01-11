@@ -28,10 +28,3 @@ provider "kubectl" {
   load_config_file       = false
 }
 
-terraform {
-  backend "s3" {
-    bucket = "sistemapedidos-eks"   # Nome do bucket
-    key    = "terraform.tfstate"    # O nome do arquivo dentro do bucket
-    region = "us-east-1"
-  }
-}
