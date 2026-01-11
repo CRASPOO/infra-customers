@@ -1,4 +1,4 @@
-data "eaws_iam_rol" "cluster" {
+data "aws_iam_role" "cluster" {
   name = "eks-cluster-role"
 
 }
