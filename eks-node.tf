@@ -29,7 +29,7 @@
 resource "aws_eks_node_group" "clientes" {
   cluster_name    = aws_eks_cluster.cluster.name
   node_group_name = "nodeg-clientes-${var.bucket_name_backend}"
-  node_role_arn   = aws_iam_role.node.arn
+  node_role_arn   = data.aws_iam_role.node.arn
   subnet_ids      = aws_subnet.subnet_public[*].id
   disk_size       = 50
   instance_types  = [var.instance-type]
@@ -66,7 +66,7 @@ depends_on = [
 resource "aws_eks_node_group" "produtos" {
   cluster_name    = aws_eks_cluster.cluster.name
   node_group_name = "nodeg-produtos-${var.bucket_name_backend}"
-  node_role_arn   = aws_iam_role.node.arn
+  node_role_arn   = data.aws_iam_role.node.arn
   subnet_ids      = aws_subnet.subnet_public[*].id
   disk_size       = 50
   instance_types  = [var.instance-type]
@@ -103,7 +103,7 @@ resource "aws_eks_node_group" "produtos" {
 resource "aws_eks_node_group" "pedidos" {
   cluster_name    = aws_eks_cluster.cluster.name
   node_group_name = "nodeg-pedidos-${var.bucket_name_backend}"
-  node_role_arn   = aws_iam_role.node.arn
+  node_role_arn   = data.aws_iam_role.node.arn
   subnet_ids      = aws_subnet.subnet_public[*].id
   disk_size       = 50
   instance_types  = [var.instance-type]
