@@ -3,6 +3,7 @@ data "aws_eks_cluster" "cluster" {
   depends_on = [
     aws_eks_cluster.cluster
   ]
+
 }
 
 data "aws_eks_cluster_auth" "auth" {
