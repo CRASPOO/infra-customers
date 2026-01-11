@@ -33,5 +33,6 @@ terraform {
     bucket = "sistemapedidos-eks"   # Nome do bucket
     key    = "terraform.tfstate"    # O nome do arquivo dentro do bucket
     region = "us-east-1"
+
   }
 }
